@@ -13,4 +13,5 @@ waits for answer until timeout
 
 # Heartbeat
 https://www.apachelounge.com/viewtopic.php?p=41271#41271
+
 https://stackoverflow.com/questions/72479479/apache-load-balancer-doesnt-work-for-heartbeat-lbmethod
