@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  apache:
+    image: httpd:latest
+    networks:
+      - loadbalancer_network
+    ports:
+      - "8000:80"
+    volumes:
+      - ./my-httpd.conf:/usr/local/apache2/conf/httpd.conf:ro
+
+
+networks:
+  loadbalancer_network:
+    name: loadbalancer_network
+    external: true  # Assuming the network already exists
