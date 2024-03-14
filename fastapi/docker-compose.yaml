@@ -1,0 +1,16 @@
+services:
+  api:
+    build:
+      context: .
+      target: base
+    container_name: fastapi-application
+    networks:
+      - loadbalancer_network
+    ports:
+      - '8001:8000'
+    restart: "no"
+
+networks:
+  loadbalancer_network:
+    name: loadbalancer_network
+    external: true  # Assuming the network already exists
